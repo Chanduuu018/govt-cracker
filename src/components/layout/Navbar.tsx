@@ -1,32 +1,19 @@
+import Logo from "./Logo";
+import NavLinks from "./NavLinks";
+import UserActions from "./UserActions.tsx";
+import MobileMenu from "./MobileMenu";
+
 const Navbar = () => {
   return (
-    <header className="w-full bg-slate-950 border-b border-slate-800">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <h1 className="text-2xl font-bold text-blue-500">
-          Govt Cracker
-        </h1>
+    <header className="sticky top-0 z-50 border-b border-slate-800/50 bg-slate-950/80 backdrop-blur-xl">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+        <Logo />
 
-        <nav className="hidden gap-8 md:flex">
-          <a href="#" className="hover:text-blue-400 transition">
-            Home
-          </a>
+        <NavLinks />
 
-          <a href="#" className="hover:text-blue-400 transition">
-            Courses
-          </a>
+        <UserActions />
 
-          <a href="#" className="hover:text-blue-400 transition">
-            Mock Tests
-          </a>
-
-          <a href="#" className="hover:text-blue-400 transition">
-            Current Affairs
-          </a>
-        </nav>
-
-        <button className="rounded-lg bg-blue-600 px-5 py-2 hover:bg-blue-700 transition">
-          Login
-        </button>
+        <MobileMenu />
       </div>
     </header>
   );
