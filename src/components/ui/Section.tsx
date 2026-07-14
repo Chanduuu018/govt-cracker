@@ -4,11 +4,16 @@ import Container from "./Container";
 interface SectionProps {
   children: ReactNode;
   className?: string;
+  id?: string;
 }
 
-const Section = ({ children, className = "" }: SectionProps) => {
+const Section = ({
+  children,
+  className = "",
+  id,
+}: SectionProps) => {
   return (
-    <section className={`py-24 ${className}`}>
+<section id={id} className={`py-24 ${className}`}>
       <Container>{children}</Container>
     </section>
   );
