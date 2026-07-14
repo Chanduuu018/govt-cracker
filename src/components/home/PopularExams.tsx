@@ -2,11 +2,14 @@ import Section from "../ui/Section";
 import Card from "../ui/Card";
 import { motion } from "framer-motion";
 import { examCategories } from "../../constants/examCategories";
-
+import { SECTION_IDS } from "../../constants/sectionIds";
 import { ArrowRight } from "lucide-react";
 const PopularExams = () => {
   return (
-    <Section className="scroll-mt-24" id="popular-exams">
+    <Section
+  id={SECTION_IDS.POPULAR_EXAMS}
+  className="scroll-mt-24"
+>
       <div className="text-center">
         <h2 className="text-4xl font-bold text-white">
           Popular Exams
@@ -18,7 +21,7 @@ const PopularExams = () => {
       </div>
 
       <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {examCategories.map((exam) => (
+        {examCategories.map((exam, index) => (
           <motion.div
   key={exam.title}
   initial={{ opacity: 0, y: 40 }}
@@ -26,7 +29,7 @@ const PopularExams = () => {
   viewport={{ once: true }}
   transition={{
   duration: 0.5,
-  delay: examCategories.indexOf(exam) * 0.1,
+  delay: index * 0.1,
 }}
 >
   <Card>

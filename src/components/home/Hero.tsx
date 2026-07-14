@@ -45,7 +45,14 @@ const Hero = () => {
         <SearchBar />
 
         <div className="mt-10 flex gap-4">
-          <button className="flex items-center gap-2 rounded-xl bg-blue-600 px-8 py-4 font-semibold transition hover:bg-blue-700">
+          <button
+  onClick={() =>
+    document
+      .getElementById("popular-exams")
+      ?.scrollIntoView({ behavior: "smooth" })
+  }
+  className="flex items-center gap-2 rounded-xl bg-blue-600 px-8 py-4 font-semibold transition hover:bg-blue-700"
+>
             Start Learning
             <ArrowRight size={18} />
           </button>
