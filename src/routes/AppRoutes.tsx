@@ -1,8 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import Home from "../pages/Home";
-import SSC from "../pages/exams/SSC";
-
+import SSC from "../pages/exams/ssc/Dashboard";
 const AppRoutes = () => {
   return (
     <Routes>
