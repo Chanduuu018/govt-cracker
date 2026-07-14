@@ -15,11 +15,12 @@ const QuickAccess = () => {
       <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {quickAccess.map((item) => (
           <QuickAccessCard
-            key={item.title}
-            icon={item.icon}
-            title={item.title}
-            subtitle={item.subtitle}
-          />
+  key={item.title}
+  icon={item.icon}
+  title={item.title}
+  subtitle={item.subtitle}
+  route={item.route}
+/>
         ))}
       </div>
     </section>
