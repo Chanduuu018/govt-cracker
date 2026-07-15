@@ -5,6 +5,7 @@ export const notes = [
     title: "Ancient History",
     pages: 120,
     downloads: 1250,
+    file: "/pdfs/ancient-history.pdf",
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const notes = [
     title: "Medieval History",
     pages: 98,
     downloads: 980,
+    file: "/pdfs/medieval-history.pdf",
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const notes = [
     title: "Modern History",
     pages: 145,
     downloads: 1840,
+    file: "/pdfs/modern-history.pdf",
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ export const notes = [
     title: "Indian Constitution",
     pages: 180,
     downloads: 2120,
+    file: "/pdfs/constitution.pdf",
   },
   {
     id: 5,
@@ -33,5 +37,6 @@ export const notes = [
     title: "Indian Geography",
     pages: 160,
     downloads: 1560,
+    file: "/pdfs/indian-geography.pdf",
   },
 ];

@@ -32,11 +32,12 @@ const Notes = () => {
             <div className="space-y-4">
               {subjectNotes.map((note) => (
                 <NoteCard
-                  key={note.id}
-                  title={note.title}
-                  pages={note.pages}
-                  downloads={note.downloads}
-                />
+                   key={note.id}
+                    id={note.id}
+                    title={note.title}
+                    pages={note.pages}
+                    downloads={note.downloads}
+                    />        
               ))}
             </div>
           </section>

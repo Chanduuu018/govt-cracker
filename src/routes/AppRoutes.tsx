@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import Home from "../pages/Home";
-
+import NoteViewer from "../pages/exams/ssc/NoteViewer";
 import SSCDashboard from "../pages/exams/ssc/Dashboard";
 import Notes from "../pages/exams/ssc/Notes";
 import PreviousPapers from "../pages/exams/ssc/PreviousPapers";
@@ -19,6 +19,7 @@ const AppRoutes = () => {
       {/* SSC */}
       <Route path="/ssc" element={<SSCDashboard />} />
       <Route path="/ssc/notes" element={<Notes />} />
+      <Route path="/ssc/notes/:id" element={<NoteViewer />} />
       <Route
         path="/ssc/previous-papers"
         element={<PreviousPapers />}
