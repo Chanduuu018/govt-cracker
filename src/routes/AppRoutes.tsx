@@ -9,7 +9,7 @@ import MockTests from "../pages/exams/ssc/MockTests";
 import Practice from "../pages/exams/ssc/Practice";
 import CurrentAffairs from "../pages/exams/ssc/CurrentAffairs";
 import AITutor from "../pages/exams/ssc/AITutor";
-
+import TestPage from "../pages/exams/ssc/TestPage";
 const AppRoutes = () => {
   return (
     <Routes>
@@ -30,6 +30,7 @@ const AppRoutes = () => {
         path="/ssc/current-affairs"
         element={<CurrentAffairs />}
       />
+      <Route path="/ssc/test/1" element={<TestPage />} />
       <Route path="/ssc/ai-tutor" element={<AITutor />} />
     </Routes>
   );
