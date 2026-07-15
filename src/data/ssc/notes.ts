@@ -1,12 +1,12 @@
 export const notes = [
   {
-    id: 1,
-    subject: "History",
-    title: "Ancient History",
-    pages: 120,
-    downloads: 1250,
-    file: "/pdfs/ancient-history.pdf",
-  },
+  id: 1,
+  subject: "History",
+  title: "Ancient History",
+  pages: 120,
+  downloads: 1250,
+  file: "/pdfs/ancient-history.pdf",
+},
   {
     id: 2,
     subject: "History",
