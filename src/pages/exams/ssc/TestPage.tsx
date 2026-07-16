@@ -1,9 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import QuestionCard from "../../../components/exam/QuestionCard";
 import { test1Questions } from "../../../data/ssc/mock-tests/test1";
 
 const TestPage = () => {
+  const navigate = useNavigate();
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
+
   const [answers, setAnswers] = useState<(number | null)[]>(
     Array(test1Questions.length).fill(null)
   );
@@ -12,6 +16,23 @@ const TestPage = () => {
     const updatedAnswers = [...answers];
     updatedAnswers[currentQuestion] = optionIndex;
     setAnswers(updatedAnswers);
+  };
+
+  const handleSubmit = () => {
+    let score = 0;
+
+    test1Questions.forEach((question, index) => {
+      if (answers[index] === question.answer) {
+        score++;
+      }
+    });
+
+    navigate("/ssc/result", {
+      state: {
+        score,
+        total: test1Questions.length,
+      },
+    });
   };
 
   return (
@@ -37,23 +58,27 @@ const TestPage = () => {
         <div className="mt-8 flex justify-between">
           <button
             disabled={currentQuestion === 0}
-            onClick={() =>
-              setCurrentQuestion((prev) => prev - 1)
-            }
+            onClick={() => setCurrentQuestion((prev) => prev - 1)}
             className="rounded-lg bg-slate-700 px-6 py-3 text-white disabled:opacity-50"
           >
             Previous
           </button>
 
-          <button
-            disabled={currentQuestion === test1Questions.length - 1}
-            onClick={() =>
-              setCurrentQuestion((prev) => prev + 1)
-            }
-            className="rounded-lg bg-blue-600 px-6 py-3 text-white disabled:opacity-50"
-          >
-            Next
-          </button>
+          {currentQuestion === test1Questions.length - 1 ? (
+            <button
+              onClick={handleSubmit}
+              className="rounded-lg bg-green-600 px-6 py-3 text-white hover:bg-green-700"
+            >
+              Submit Test
+            </button>
+          ) : (
+            <button
+              onClick={() => setCurrentQuestion((prev) => prev + 1)}
+              className="rounded-lg bg-blue-600 px-6 py-3 text-white hover:bg-blue-700"
+            >
+              Next
+            </button>
+          )}
         </div>
       </div>
     </div>

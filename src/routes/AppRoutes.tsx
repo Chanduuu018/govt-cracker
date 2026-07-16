@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-
+import Result from "../pages/exams/ssc/Result";
 import Home from "../pages/Home";
 import NoteViewer from "../pages/exams/ssc/NoteViewer";
 import SSCDashboard from "../pages/exams/ssc/Dashboard";
@@ -24,6 +24,7 @@ const AppRoutes = () => {
         path="/ssc/previous-papers"
         element={<PreviousPapers />}
       />
+      <Route path="/ssc/result" element={<Result />} />
       <Route path="/ssc/mock-tests" element={<MockTests />} />
       <Route path="/ssc/practice" element={<Practice />} />
       <Route

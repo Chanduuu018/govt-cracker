@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
+
 interface NoteCardProps {
   id: number;
   title: string;
   pages: number;
   downloads: number;
 }
-const navigate = useNavigate();
+
 const NoteCard = ({
   id,
   title,
@@ -27,11 +28,11 @@ const NoteCard = ({
       </div>
 
       <button
-  onClick={() => navigate("/ssc/test/1")}
-  className="mt-6 w-full rounded-xl bg-blue-600 py-3 font-semibold text-white transition hover:bg-blue-700"
->
-  Start Test
-</button>
+        onClick={() => navigate(`/ssc/notes/${id}`)}
+        className="rounded-xl bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-700"
+      >
+        View
+      </button>
     </div>
   );
 };
